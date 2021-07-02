@@ -1,0 +1,39 @@
+.NavBar{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.icons{
+  display: flex;
+  align-items: center;
+}
+
+.icons>span{
+  font-size: 30px;
+}
+
+.Film{
+  color: black;
+  margin-right: 10px;
+  font-size: 40px;
+}
+
+.routes{
+  display: flex;
+  flex-direction: row;
+  margin-right: 50px;
+}
+.NavBar>ul>li{
+  margin-left: 10px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+li>a{
+  text-decoration: none;
+  color: black;
+}

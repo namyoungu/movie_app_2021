@@ -1,0 +1,10 @@
+.movies__detail__movie{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.movies__detail__movie>img{
+  max-width: 500px;}

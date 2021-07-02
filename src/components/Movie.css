@@ -1,0 +1,83 @@
+:root {
+  --bg-color: #37464f;
+  --pane-padding: 5px 42px;
+  --text-color: white;
+
+  /*color*/
+  --color-black: #3f454d;
+  --color-white: #ffffff;
+  --color-blue: #3b88c3;
+  --color-yellow: #fbbe28;
+  --color-pink: #fd7f84;
+  --color-light-gray: #bdbdbd;
+
+  /*size*/
+  --size-font: 10px;
+  --size-button: 60px;
+  --size-button-font: 18px;
+  --size-base-space: 8px;
+  --size-border: 4px;
+  --size-thumbnail: 50px;
+
+  /*animation*/
+  --animation-duration: 300ms;
+}
+
+
+body{
+  background-color: #e8eaf6;
+  margin: 0;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+li{
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.movies__movie{
+  display: flex;
+
+}
+
+.movies__movie>img{
+  display: inline-block;
+  width: 160px;
+  height: 240px;
+  margin-right: 20px;
+  margin-left: 20px;
+  transform: translate(0px, -10px);
+  box-shadow: 8px 8px 8px #bdbdbd, -8px 0 8px #bdbdbd;
+}
+
+.movie__data{
+  display: inline-block;
+  height: 240px;
+  overflow: hidden;
+}
+
+.movie__year,
+.movie__geners,
+.movie__summary{
+  color: #bdbdbd;
+}
+
+.movie__title{
+  display: inline-block;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.movie__year{
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.movie__geners{
+  margin-top: 0;
+  margin-bottom: 0;
+}
