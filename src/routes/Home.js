@@ -1,45 +1,49 @@
-import PropTypes from "prop-types";
-import React, { useState } from "react";
-import axios from "axios";
-import Movie from "../components/Movie";
+import React from "react";
+import MovieList from "../components/MovieList";
+import useAxios from "../components/useAxios";
+import { useEffect, useState } from "react";
 import "./Home.css";
+import HomeMainImg from "../components/HomeMainImg";
 
-class Home extends React.Component {
-  state = {
-    isLoading: true,
-  }
+function Home(){
+  const { loading, data, error } = useAxios({ url: "https://yts.mx/api/v2/list_movies.json" });
+  const [movies, setMovies] = useState(null);
 
-  getMovies = async () => {
-    const {
-      data: {
-        data: { movies }
+  useEffect(() => {
+    if(!loading){
+      setMovies(data.data.data.movies);
+      console.log(movies);
+    }
+  }, [loading])
+
+  return(
+    <section>
+      {
+          movies &&
+          <HomeMainImg
+            movie = {movies[0]}
+          />
       }
-    } = await axios.get("https://yts.mx/api/v2/list_movies.json");
-    //console.log(movies);
-    //    this.setState({ movies: movies });
-    this.setState({ movies, isLoading: false });
-  };
+      <h1>최근에 나온 컨텐츠</h1>
+      {
+          movies &&
+          <MovieList
+            movies = {movies}
+          />
+      }
+      
+      <h1>추천 컨텐츠</h1>
+      {
+          movies &&
+          <MovieList
+            movies = {movies}
+          />
+      }
 
-  componentDidMount() {
-    this.getMovies();
-  }
+    </section>
+    
 
-  render() {
-    const { isLoading, movies } = this.state;
-    return (
-      <section className="container">
-        {isLoading ? (<div className="loader"><span className="loader__text">Loading...</span></div>) : movies.map(movie => {
-          return (
-            <div key={movie.id} className="movies">
-              {
-                <Movie key={movie.id} id={movie.id} year={movie.year} title={movie.title} summary={movie.summary} poster={movie.medium_cover_image} genres={movie.genres} />
-              }
-            </div>);
-        })}
-      </section>
-    );
-  }
+  );
 }
-
 
 export default Home;

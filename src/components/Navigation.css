@@ -1,4 +1,19 @@
-.NavBar{
+li {
+  list-style: none;
+  color: white;
+}
+
+.navMovies {
+  color: red;
+}
+
+.navHome,
+.navAbout,
+.navTest {
+  color: white;
+}
+
+.NavBar {
   width: 100%;
   height: 100%;
   display: flex;
@@ -6,34 +21,34 @@
   margin-left: 20px;
 }
 
-.icons{
+.icons {
   display: flex;
   align-items: center;
 }
 
-.icons>span{
+.icons > span {
   font-size: 30px;
 }
 
-.Film{
+.Film {
   color: black;
   margin-right: 10px;
   font-size: 40px;
 }
 
-.routes{
+.routes {
   display: flex;
   flex-direction: row;
   margin-right: 50px;
 }
-.NavBar>ul>li{
+.NavBar > ul > li {
   margin-left: 10px;
   margin-bottom: 5px;
   border-radius: 20px;
   font-size: 20px;
 }
 
-li>a{
+li > a {
   text-decoration: none;
   color: black;
 }

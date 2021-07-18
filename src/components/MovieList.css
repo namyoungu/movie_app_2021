@@ -1,0 +1,40 @@
+.movies {
+  list-style: none;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  cursor: pointer;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(22, 1fr);
+
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.movies::-webkit-scrollbar {
+  display: none; /*Chrome, Safari, Opera */
+}
+
+.btnBox {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftBtn,
+.rightBtn {
+  color: white;
+  font-size: 40px;
+}
+
+.leftBtn:hover,
+.rightBtn:hover {
+  transform: scale(1.2);
+}

@@ -28,7 +28,7 @@ function Movie({ id, year, title, summary, poster, genres, rating, runtime, back
       <div className="movie" onMouseOver ={handleMouseOver} onMouseLeave={handleMouseLeave}>
         <img src={poster} alt={title} className="moiveImg"/>
         {/* {onMouse ? <img src={poster} alt={title} className="moiveImg2"/>: null} */}
-        
+        {onMouse ? <div>asdfasd</div>: null}
       </div>
     </Link>
   );

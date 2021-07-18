@@ -9,12 +9,13 @@ function Navigation() {
     <>
       <nav className="NavBar">
         <div className="icons">
-          <Link to="/about"><Film className="Film" /></Link>
-          <span>MOVIES</span>
+          <Link to="/about"><Film className="Film" color="red"/></Link>
+          <span className="navMovies">MOVIES</span>
         </div>
         <ul className="routes">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
+          <li><Link to="/" className="navHome">Home</Link></li>
+          <li><Link to="/about" className="navAbout">About</Link></li>
+          <li><Link to="/test" className="navTest">Test</Link></li>
         </ul>
       </nav >
       <hr></hr>

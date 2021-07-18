@@ -1,0 +1,33 @@
+.mainImgBox {
+  position: relative;
+}
+
+.mainImg {
+  width: 100%;
+  min-width: 50%;
+}
+
+.mainInfo {
+}
+
+.playBtnBox:hover {
+  background-color: #eeeeee;
+}
+
+.playBtn {
+  margin-left: 2px;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+@media screen and (max-width: 700px) {
+  .mainImgSummary,
+  .playBtn {
+    display: none;
+  }
+
+  .mainImgTitle {
+    top: 80%;
+    left: 8%;
+  }
+}
